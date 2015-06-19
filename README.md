@@ -68,4 +68,4 @@ Making shapes just using border-radius property.
 		<div class="green s-leaf-4"></div>
 		<div class="blue s-leaf-4"></div>
 	</div> <!-- .col-md-4 -->
-</div> <!-- #usage -->
+</div> <!-- usage -->
