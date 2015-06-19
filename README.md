@@ -51,6 +51,6 @@ Making shapes just using border-radius property.
 
 	<div class="col-md-4">
 		<h2>View</h2>
-		![Alt text](https://lh5.googleusercontent.com/nHy1CheF6Bvi6oLETm2XApTvkmYpIvAntLebg7NpsZ_olkTJ1XoPb-qWyAwVwAu2VI8Eq2UfU1N_NWo=w1342-h561 "Demo")
+		<img src="https://lh5.googleusercontent.com/nHy1CheF6Bvi6oLETm2XApTvkmYpIvAntLebg7NpsZ_olkTJ1XoPb-qWyAwVwAu2VI8Eq2UfU1N_NWo=w1342-h561" alt="">
 	</div> 
 </div> 
