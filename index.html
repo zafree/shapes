@@ -5,6 +5,7 @@
 		<title>Shapes 2015</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/bootaide.min.css" />
@@ -49,6 +50,38 @@
 				margin-bottom: 75px;
 			}
 		</style>
+
+		<script type="text/template" id="template">
+			<%_.each(cols, function(shapes, col){%>
+			<div class="col col-<%=col+1%>">
+				<%_.each(shapes, function(shape){%>
+				<ul>
+					<li><div class="s-<%=shape%>"></div><span>s-<%=shape%></span></li>
+					<li><div class="s-<%=shape%>-2"></div><span>s-<%=shape%>-2</span></li>
+					<li><div class="s-<%=shape%>-3"></div><span>s-<%=shape%>-3</span></li>
+					<li><div class="s-<%=shape%>-4"></div><span>s-<%=shape%>-4</span></li>
+				</ul>
+				<%})%>
+			</div>
+			<%})%>
+		</script>
+
+		<script>
+		var template = document.getElementById('template').innerHTML;
+		var cols = [
+		  ["square", "round", "drop", "uoda", "slope"],
+		  ["screen", "egg", "leaf", "lealo", "tray"],
+		  ["lope", "rugby", "lady", "aleto", "toope"],
+		  ["flag", "kula", "bird", "hello", "curv"],
+		  ["rag", "glap", "holo", "kullo", "bucket"],
+		  ["pick", "bomb"]
+		];
+
+		window.onload = function(){
+			var html = _.template(template)({cols: cols});
+			document.getElementById("shapes").innerHTML = html;
+		};
+		</script>
 	</head>
 	<body>
 		<!--[if lt IE 10]>
@@ -62,193 +95,7 @@
 				<div class="row shape">
 					<h2 class="text-center m-b-xxl">Making shapes just using <span class="text-danger">border-radius</span> property</h2>
 					
-					<!--1st -->
-					<div class="col">
-						<ul>
-							<li><div class="s-square"></div><span>s-square</span></li>
-							<li><div class="s-square-2"></div><span>s-square-2</span></li>
-							<li><div class="s-square-3"></div><span>s-square-3</span></li>
-							<li><div class="s-square-4"></div><span>s-square-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-screen"></div><span>s-screen</span></li>
-							<li><div class="s-screen-2"></div><span>s-screen-2</span></li>
-							<li><div class="s-screen-3"></div><span>s-screen-3</span></li>
-							<li><div class="s-screen-4"></div><span>s-screen-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-lope"></div><span>s-lope</span></li>
-							<li><div class="s-lope-2"></div><span>s-lope-2</span></li>
-							<li><div class="s-lope-3"></div><span>s-lope-3</span></li>
-							<li><div class="s-lope-4"></div><span>s-lope-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-flag"></div><span>s-flag</span></li>
-							<li><div class="s-flag-2"></div><span>s-flag-2</span></li>
-							<li><div class="s-flag-3"></div><span>s-flag-3</span></li>
-							<li><div class="s-flag-4"></div><span>s-flag-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-rag"></div><span>s-rag</span></li>
-							<li><div class="s-rag-2"></div><span>s-rag-2</span></li>
-							<li><div class="s-rag-3"></div><span>s-rag-3</span></li>
-							<li><div class="s-rag-4"></div><span>s-rag-4</span></li>
-						</ul>
-					</div>
-					<!--/ 1st -->
-					
-					<!--2nd -->
-					<div class="col">
-						<ul>
-							<li><div class="s-round"></div><span>s-round</span></li>
-							<li><div class="s-round-2"></div><span>s-round-2</span></li>
-							<li><div class="s-round-3"></div><span>s-round-3</span></li>
-							<li><div class="s-round-4"></div><span>s-round-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-egg"></div><span>s-egg</span></li>
-							<li><div class="s-egg-2"></div><span>s-egg-2</span></li>
-							<li><div class="s-egg-3"></div><span>s-egg-3</span></li>
-							<li><div class="s-egg-4"></div><span>s-egg-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-rugby"></div><span>s-rugby</span></li>
-							<li><div class="s-rugby-2"></div><span>s-rugby-2</span></li>
-							<li><div class="s-rugby-3"></div><span>s-rugby-3</span></li>
-							<li><div class="s-rugby-4"></div><span>s-rugby-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-kula"></div><span>s-kula</span></li>
-							<li><div class="s-kula-2"></div><span>s-kula-2</span></li>
-							<li><div class="s-kula-3"></div><span>s-kula-3</span></li>
-							<li><div class="s-kula-4"></div><span>s-kula-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-glap"></div><span>s-glap</span></li>
-							<li><div class="s-glap-2"></div><span>s-glap-2</span></li>
-							<li><div class="s-glap-3"></div><span>s-glap-3</span></li>
-							<li><div class="s-glap-4"></div><span>s-glap-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-pick"></div><span>s-pick</span></li>
-							<li><div class="s-pick-2"></div><span>s-pick-2</span></li>
-							<li><div class="s-pick-3"></div><span>s-pick-3</span></li>
-							<li><div class="s-pick-4"></div><span>s-pick-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-bomb"></div><span>s-bomb</span></li>
-							<li><div class="s-bomb-2"></div><span>s-bomb-2</span></li>
-							<li><div class="s-bomb-3"></div><span>s-bomb-3</span></li>
-							<li><div class="s-bomb-4"></div><span>s-bomb-4</span></li>
-						</ul>			
-					</div>
-					<!--/ 2nd -->
-					
-					<!--3rd -->
-					<div class="col">
-						<ul>
-							<li><div class="s-drop"></div><span>s-drop</span></li>
-							<li><div class="s-drop-2"></div><span>s-drop-2</span></li>
-							<li><div class="s-drop-3"></div><span>s-drop-3</span></li>
-							<li><div class="s-drop-4"></div><span>s-drop-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-leaf"></div><span>s-leaf</span></li>
-							<li><div class="s-leaf-2"></div><span>s-leaf-2</span></li>
-							<li><div class="s-leaf-3"></div><span>s-leaf-3</span></li>
-							<li><div class="s-leaf-4"></div><span>s-leaf-4</span></li>					
-						</ul>
-						<ul>
-							<li><div class="s-lady"></div><span>s-lady</span></li>
-							<li><div class="s-lady-2"></div><span>s-lady-2</span></li>
-							<li><div class="s-lady-3"></div><span>s-lady-3</span></li>
-							<li><div class="s-lady-4"></div><span>s-lady-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-bird"></div><span>s-bird</span></li>
-							<li><div class="s-bird-2"></div><span>s-bird-2</span></li>
-							<li><div class="s-bird-3"></div><span>s-bird-3</span></li>
-							<li><div class="s-bird-4"></div><span>s-bird-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-holo"></div><span>s-holo</span></li>
-							<li><div class="s-holo-2"></div><span>s-holo-2</span></li>
-							<li><div class="s-holo-3"></div><span>s-holo-3</span></li>
-							<li><div class="s-holo-4"></div><span>s-holo-4</span></li>
-						</ul>
-					</div>
-					<!--/ 3rd -->
-					
-					<!--4th -->
-					<div class="col">
-						<ul>
-							<li><div class="s-uoda"></div><span>s-uoda</span></li>
-							<li><div class="s-uoda-2"></div><span>s-uoda-2</span></li>
-							<li><div class="s-uoda-3"></div><span>s-uoda-3</span></li>
-							<li><div class="s-uoda-4"></div><span>s-uoda-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-lealo"></div><span>s-lealo</span></li>
-							<li><div class="s-lealo-2"></div><span>s-lealo-2</span></li>
-							<li><div class="s-lealo-3"></div><span>s-lealo-3</span></li>
-							<li><div class="s-lealo-4"></div><span>s-lealo-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-aleto"></div><span>s-aleto</span></li>
-							<li><div class="s-aleto-2"></div><span>s-aleto-2</span></li>
-							<li><div class="s-aleto-3"></div><span>s-aleto-3</span></li>
-							<li><div class="s-aleto-4"></div><span>s-aleto-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-hello"></div><span>s-hello</span></li>
-							<li><div class="s-hello-2"></div><span>s-hello-2</span></li>
-							<li><div class="s-hello-3"></div><span>s-hello-3</span></li>
-							<li><div class="s-hello-4"></div><span>s-hello-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-kullo"></div><span>s-kullo</span></li>
-							<li><div class="s-kullo-2"></div><span>s-kullo-2</span></li>
-							<li><div class="s-kullo-3"></div><span>s-kullo-3</span></li>
-							<li><div class="s-kullo-4"></div><span>s-kullo-4</span></li>
-						</ul>
-					</div>
-					<!--/ 4th -->
-					
-					<!--5th -->
-					<div class="col">
-						<ul>
-							<li><div class="s-slope"></div><span>s-slope</span></li>
-							<li><div class="s-slope-2"></div><span>s-slope-2</span></li>
-							<li><div class="s-slope-3"></div><span>s-slope-3</span></li>
-							<li><div class="s-slope-4"></div><span>s-slope-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-tray"></div><span>s-tray</span></li>
-							<li><div class="s-tray-2"></div><span>s-tray-2</span></li>
-							<li><div class="s-tray-3"></div><span>s-tray-3</span></li>
-							<li><div class="s-tray-4"></div><span>s-tray-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-toope"></div><span>s-toope</span></li>
-							<li><div class="s-toope-2"></div><span>s-toope-2</span></li>
-							<li><div class="s-toope-3"></div><span>s-toope-3</span></li>
-							<li><div class="s-toope-4"></div><span>s-toope-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-curv"></div><span>s-curv</span></li>
-							<li><div class="s-curv-2"></div><span>curv-2</span></li>
-							<li><div class="s-curv-3"></div><span>s-curv-3</span></li>
-							<li><div class="s-curv-4"></div><span>s-curv-4</span></li>
-						</ul>
-						<ul>
-							<li><div class="s-bucket"></div><span>s-bucket</span></li>
-							<li><div class="s-bucket-2"></div><span>s-bucket-2</span></li>
-							<li><div class="s-bucket-3"></div><span>s-bucket-3</span></li>
-							<li><div class="s-bucket-4"></div><span>s-bucket-4</span></li>
-						</ul>
-					</div>
-					<!--/ 5th -->
-					
+					<div id="shapes"></div>
 				</div>
 			</div>
 
