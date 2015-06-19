@@ -25,7 +25,7 @@ Making shapes just using border-radius property.
 } 
 &lt;/style&gt; 
 </pre>
-	</div> <!-- .col-md-4 -->
+	</div> 
 
 	<div class="col-md-4">
 		<h2>HTML</h2>
@@ -46,26 +46,11 @@ Making shapes just using border-radius property.
 	&lt;div class=&quot;green s-leaf-4&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;blue s-leaf-4&quot;&gt;&lt;/div&gt;
 	</pre>
-	</div> <!-- .col-md-4 -->
+	</div> 
 
 
 	<div class="col-md-4">
 		<h2>View</h2>
-		<div class="red s-leaf"></div>
-		<div class="green s-leaf"></div>
-		<div class="blue s-leaf"></div>
-
-		<div class="red s-leaf-2"></div>
-		<div class="green s-leaf-2"></div>
-		<div class="blue s-leaf-2"></div>
-		
-		<div class="red s-leaf-3"></div>
-		<div class="green s-leaf-3"></div>
-		<div class="blue s-leaf-3"></div>
-
-		
-		<div class="red s-leaf-4"></div>
-		<div class="green s-leaf-4"></div>
-		<div class="blue s-leaf-4"></div>
-	</div> <!-- .col-md-4 -->
-</div> <!-- usage -->
+		![Alt text](https://lh5.googleusercontent.com/nHy1CheF6Bvi6oLETm2XApTvkmYpIvAntLebg7NpsZ_olkTJ1XoPb-qWyAwVwAu2VI8Eq2UfU1N_NWo=w1342-h561 "Demo")
+	</div> 
+</div> 
